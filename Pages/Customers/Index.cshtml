@@ -1,0 +1,30 @@
+﻿@page
+@model CustomersModel
+
+<h1>Customers</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+            <th>Status</th>
+            <th>Registration Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model.Customers)
+        {
+            <tr>
+                <td>@customer.Name</td>
+                <td>@customer.Email</td>
+                <td>@customer.Phone</td>
+                <td>@customer.Company</td>
+                <td>@customer.Status</td>
+                <td>@customer.RegistrationDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
