@@ -1,3 +1,5 @@
+using CRMApplicationWeb.Services;
+
 namespace CRMApplicationWeb
 {
     public class Program
@@ -8,6 +10,8 @@ namespace CRMApplicationWeb
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+
+            builder.Services.AddHttpClient<ClientService>();
 
             var app = builder.Build();
 

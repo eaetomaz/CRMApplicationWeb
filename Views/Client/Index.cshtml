@@ -1,0 +1,29 @@
+@model List<CRMApplicationWeb.ViewModels.ClientViewModel>
+
+<h1>Clients</h1>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Company</th>
+            <th>Status</th>
+            <th>Registered At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td>@client.Nome</td>
+                <td>@client.Email</td>
+                <td>@client.Telefone</td>
+                <td>@client.Empresa</td>
+                <td>@client.Status</td>
+                <td>@client.DataCadastro.ToString("dd/MM/yyyy")</td>
+            </tr>
+        }
+    </tbody>
+</table>
