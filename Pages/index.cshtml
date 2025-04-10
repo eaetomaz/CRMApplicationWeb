@@ -1,0 +1,38 @@
+﻿@page
+@model dynamic
+@{
+    ViewData["Title"] = "Clients";
+}
+
+<div class="container mt-5">
+    <h2 class="mb-4">Clients List</h2>
+
+    <a href="#" class="btn btn-primary mb-3">+ Add New Client</a>
+
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Company</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Placeholder rows -->
+            <tr>
+                <td>John Doe</td>
+                <td>john@example.com</td>
+                <td>(123) 456-7890</td>
+                <td>Acme Corp</td>
+                <td><span class="badge bg-success">Active</span></td>
+                <td>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
+                    <a href="#" class="btn btn-sm btn-outline-danger">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
